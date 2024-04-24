@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('nama', 25)->unique();
             $table->string('mata_kuliah', 20)->unique();
-            $table->string('jadwal_hari', 20);
+            $table->string('umur', 20);
         });
     }
 

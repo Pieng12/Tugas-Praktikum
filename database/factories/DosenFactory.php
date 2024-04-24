@@ -21,7 +21,7 @@ class DosenFactory extends Factory
         return [
             'nama' => $this->faker->name(),
             'mata_kuliah' => $this->faker->unique->word(),
-            'jadwal_hari' => $this->faker->dayofWeek(),
+            'umur' => $this->faker->age(),
         ];
     }
 }
