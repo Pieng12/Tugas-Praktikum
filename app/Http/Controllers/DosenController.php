@@ -10,10 +10,12 @@ class DosenController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index2()
     {
         $dosen = Dosen::all();
-        return view('dosen',['dosen' => $dosen]);
+        return view('dosen', [
+            'dosen' => $dosen
+        ]); 
         return view('dosen');
     }
 
