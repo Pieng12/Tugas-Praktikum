@@ -2,7 +2,6 @@
 
 namespace Database\Factories;
 
-use App\Models\Dosen;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -15,13 +14,14 @@ class DosenFactory extends Factory
      *
      * @return array<string, mixed>
      */
-    protected $model = Dosen::Class;
     public function definition(): array
     {
         return [
+            'nip' => $this->faker->numerify('##########'),
+            'email' => $this->faker->unique->safeEmail(),
             'nama' => $this->faker->name(),
-            'mata_kuliah' => $this->faker->unique->word(),
-            'umur' => $this->faker->age(),
+            'no_hp' => $this->faker->phoneNumber()
+
         ];
     }
 }
